@@ -1,0 +1,79 @@
+services:
+  # ============================================
+  # WEB CHALLENGES
+  # ============================================
+  
+  # 1. SQL Injection Easy - Port 5001
+  sql-injection-easy:
+    build: ./web/01-sql-injection-easy
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+
+  # 2. Hidden Page - Port 5002
+  hidden-page:
+    build: ./web/02-hidden-page
+    ports:
+      - "5002:5000"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+
+  # 9. SQL Blind - Port 5003
+  sql-blind:
+    build: ./web/09-sql-blind
+    ports:
+      - "5003:5000"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+
+  # 10. File Upload - Port 5004
+  file-upload:
+    build: ./web/10-file-upload
+    ports:
+      - "5004:80"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+
+  # 16. Command Injection - Port 5005
+  command-injection:
+    build: ./web/16-command-injection
+    ports:
+      - "5005:5000"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+
+  # 7. Robots.txt - Port 5006
+  robots-txt:
+    build: ./misc/07-robots
+    ports:
+      - "5006:5000"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+
+  # ============================================
+  # PWN CHALLENGES
+  # ============================================
+  
+  # 19. Buffer Overflow - Port 5019
+  buffer-overflow:
+    build: ./pwn/19-buffer-overflow
+    ports:
+      - "5019:9999"
+    restart: unless-stopped
+    networks:
+      - ctf-network
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+networks:
+  ctf-network:
+    driver: bridge

@@ -1,0 +1,364 @@
+{
+  "challenges": [
+    {
+      "name": "Baby SQL",
+      "category": "Web",
+      "description": "Мы нашли старую страницу входа на сайт школьной библиотеки. Говорят, там хранится что-то секретное...\n\nhttp://HOST:5001\n\nПодсказка: иногда ввод пользователя может быть опасен...",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{sql_1nj3ct10n_1s_d4ng3r0us}"
+        }
+      ],
+      "hints": [
+        {"content": "Попробуй ввести что-нибудь необычное в поле логина", "cost": 25},
+        {"content": "Что будет, если добавить кавычку?", "cost": 50}
+      ]
+    },
+    {
+      "name": "Секретная страница",
+      "category": "Web",
+      "description": "Наш веб-разработчик создал сайт и сказал, что спрятал что-то секретное. Интересно, что он имел в виду?\n\nhttp://HOST:5002",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{h1dd3n_p4g3s_4r3_n0t_s3cur3}"
+        }
+      ],
+      "hints": [
+        {"content": "Попробуй угадать URL скрытой страницы", "cost": 25},
+        {"content": "Какое слово означает 'секрет' на английском?", "cost": 50}
+      ]
+    },
+    {
+      "name": "Простой пароль",
+      "category": "Reverse",
+      "description": "Мы нашли программу, которая проверяет пароль. Если ввести правильный пароль — она покажет флаг. Сможешь найти пароль?\n\nФайл: password_check",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{str1ngs_4r3_v1s1bl3}"
+        }
+      ],
+      "hints": [
+        {"content": "Попробуй команду strings", "cost": 25},
+        {"content": "Или открой файл в Ghidra", "cost": 50}
+      ]
+    },
+    {
+      "name": "Математика",
+      "category": "Reverse",
+      "description": "Эта программа просит ввести число и проверяет его. Найди правильное число!\n\nФайл: math_check",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{m4th_1s_3asy}"
+        }
+      ],
+      "hints": [
+        {"content": "Открой программу в декомпиляторе", "cost": 25},
+        {"content": "Какое число умноженное на 2 и плюс 10 даёт 94?", "cost": 50}
+      ]
+    },
+    {
+      "name": "Шифр Цезаря",
+      "category": "Crypto",
+      "description": "Юлий Цезарь использовал простой шифр для секретных сообщений. Мы перехватили зашифрованное сообщение. Расшифруй его!\n\nЗашифрованный текст: WDWDUKDFN{f43v4u_z4v_k3u3}",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{c43s4r_w4s_h3r3}"
+        }
+      ],
+      "hints": [
+        {"content": "Шифр Цезаря — это сдвиг букв на определённое число позиций", "cost": 25},
+        {"content": "Сдвиг небольшой (1-5)", "cost": 50}
+      ]
+    },
+    {
+      "name": "Странные символы",
+      "category": "Crypto",
+      "description": "Мы нашли странную строку в конфигурационном файле. Похоже, это какая-то кодировка...\n\nVEFUQVJIQUNLe2I0czM2NF8xc19uMHRfM25jcnlwdDEwbn0=",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{b4s364_1s_n0t_3ncrypt10n}"
+        }
+      ],
+      "hints": [
+        {"content": "Обрати внимание на символы: буквы, цифры, + и /", "cost": 25},
+        {"content": "Строка заканчивается на =", "cost": 50}
+      ]
+    },
+    {
+      "name": "Роботы",
+      "category": "Misc",
+      "description": "На этом сайте точно есть что-то скрытое от поисковиков. Где обычно указывают, какие страницы не нужно индексировать?\n\nhttp://HOST:5006",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{r0b0ts_txt_1s_publ1c}"
+        }
+      ],
+      "hints": [
+        {"content": "Как сайты говорят поисковым роботам, куда не заходить?", "cost": 25},
+        {"content": "/robots.txt", "cost": 50}
+      ]
+    },
+    {
+      "name": "Метаданные",
+      "category": "Misc",
+      "description": "Фотограф прислал нам эту красивую картинку. Говорит, что спрятал в ней секретное сообщение. Но в самой картинке ничего не видно...\n\nФайл: secret_image.jpg",
+      "value": 100,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{m3t4d4t4_1s_3v3rywh3r3}"
+        }
+      ],
+      "hints": [
+        {"content": "Изображения хранят не только пиксели", "cost": 25},
+        {"content": "Используй exiftool или онлайн-сервис", "cost": 50}
+      ]
+    },
+    {
+      "name": "Слепой SQL",
+      "category": "Web",
+      "description": "Система проверки пользователей не показывает данные напрямую, но всё равно как-то реагирует на запросы...\n\nhttp://HOST:5003\n\nИзвестно, что флаг хранится в таблице secrets в колонке flag",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{bl1nd_sql_1s_sl0w_but_w0rks}"
+        }
+      ],
+      "hints": [
+        {"content": "Система отвечает 'Пользователь существует' или 'Пользователь не найден'", "cost": 50},
+        {"content": "Используй UNION SELECT или подзапросы", "cost": 100}
+      ]
+    },
+    {
+      "name": "Загрузчик файлов",
+      "category": "Web",
+      "description": "Мы создали сервис для загрузки изображений. Правда, он проверяет только расширение файла...\n\nhttp://HOST:5004\n\nФлаг находится в файле /flag.txt на сервере",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{f1l3_upl04d_1s_d4ng3r0us}"
+        }
+      ],
+      "hints": [
+        {"content": "Какие файлы сервер может выполнять?", "cost": 50},
+        {"content": "Попробуй загрузить файл с расширением .php", "cost": 100}
+      ]
+    },
+    {
+      "name": "XOR Проверка",
+      "category": "Reverse",
+      "description": "Программа проверяет пароль с помощью XOR-шифрования. Расшифруй её логику!\n\nФайл: xor_check",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{x0r_r3v3rs3}"
+        }
+      ],
+      "hints": [
+        {"content": "XOR — обратимая операция", "cost": 50},
+        {"content": "Найди ключ XOR и зашифрованные байты", "cost": 100}
+      ]
+    },
+    {
+      "name": "Посимвольная проверка",
+      "category": "Reverse",
+      "description": "Программа проверяет каждый символ пароля отдельно. Анализируй условия!\n\nФайл: loop_check",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{l00p_ch3ck}"
+        }
+      ],
+      "hints": [
+        {"content": "Посмотри на условия в цикле", "cost": 50},
+        {"content": "Каждый символ сравнивается с определённым значением", "cost": 100}
+      ]
+    },
+    {
+      "name": "XOR Шифр",
+      "category": "Crypto",
+      "description": "Сообщение зашифровано с помощью XOR. Ключ короткий и повторяется. Ты знаешь, что флаг начинается с TATARHACK\n\nЗашифрованные байты (hex): 1f0016000c0a1c050a0c160f350e02760f32700135083b193b04",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{x0r_1s_r3v3rs1bl3}"
+        }
+      ],
+      "hints": [
+        {"content": "Если знаешь часть открытого текста, можно найти ключ", "cost": 50},
+        {"content": "TATARHACK XOR cipher = KEY (повторяющийся)", "cost": 100}
+      ]
+    },
+    {
+      "name": "Подстановка",
+      "category": "Crypto",
+      "description": "Зашифрованное сообщение использует шифр подстановки. Каждая буква заменена на другую.\n\nЗашифрованный текст: ZCZCKXZFP{WQJWZ1ZQZ10G_F1SX3K}\n\nЧастичная таблица: A→Z, B→J, C→F, H→X, K→P",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{subst1tut10n_c1ph3r}"
+        }
+      ],
+      "hints": [
+        {"content": "Используй известные пары для восстановления таблицы", "cost": 50},
+        {"content": "TATARHACK должен превратиться в ZCZCKXZFP", "cost": 100}
+      ]
+    },
+    {
+      "name": "Анализ логов",
+      "category": "Misc",
+      "description": "Мы получили логи сервера за последний месяц. Где-то в них спрятан флаг... Логов много, но ты справишься!\n\nФайл: server.log",
+      "value": 200,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{l0g_4n4lys1s_sk1lls}"
+        }
+      ],
+      "hints": [
+        {"content": "Используй grep для поиска по файлу", "cost": 50},
+        {"content": "grep -i 'tatarhack' server.log", "cost": 100}
+      ]
+    },
+    {
+      "name": "Пинг-понг",
+      "category": "Web",
+      "description": "Администратор создал веб-интерфейс для проверки доступности серверов. Просто введите IP-адрес и получите результат ping!\n\nhttp://HOST:5005",
+      "value": 300,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{c0mm4nd_1nj3ct10n_1s_cr1t1c4l}"
+        }
+      ],
+      "hints": [
+        {"content": "Что происходит с вашим вводом?", "cost": 75},
+        {"content": "Попробуйте: ; ls или && ls", "cost": 150}
+      ]
+    },
+    {
+      "name": "Запутанный код",
+      "category": "Reverse",
+      "description": "Программист решил 'защитить' свою программу, добавив кучу бесполезного кода. Но настоящая проверка всё ещё где-то там...\n\nФайл: obfuscated",
+      "value": 300,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{0bfusc4t3d}"
+        }
+      ],
+      "hints": [
+        {"content": "Большинство кода — мусор", "cost": 75},
+        {"content": "Обрати внимание на функцию real_check", "cost": 150}
+      ]
+    },
+    {
+      "name": "Двойная защита",
+      "category": "Crypto",
+      "description": "Сообщение защищено двумя слоями кодирования. Сначала XOR, потом Base64. Или наоборот?\n\nДанные: Gx4AHAYQFgEIAhAWHxU4EwA5EzY5ETc7EzI=\nКлюч XOR: SEC",
+      "value": 300,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{d0ubl3_3nc0d1ng}"
+        }
+      ],
+      "hints": [
+        {"content": "Попробуй оба порядка: Base64→XOR и XOR→Base64", "cost": 75},
+        {"content": "Правильный порядок: Base64 decode → XOR decrypt", "cost": 150}
+      ]
+    },
+    {
+      "name": "Переполнение буфера",
+      "category": "Pwn",
+      "description": "Программа читает ваш ввод в небольшой буфер. Что будет, если ввести слишком много символов?\n\nnc HOST 5019\n\nИсходный код прилагается для изучения.",
+      "value": 300,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{buff3r_0v3rfl0w_b4s1cs}"
+        }
+      ],
+      "hints": [
+        {"content": "Посмотри на размер буфера в коде", "cost": 75},
+        {"content": "Попробуй ввести много символов (больше 32)", "cost": 150}
+      ]
+    },
+    {
+      "name": "Пазл",
+      "category": "Misc",
+      "description": "Флаг был разбит на несколько частей и спрятан в разных файлах. Собери все части вместе!\n\nФайлы: part1.txt, part2.txt, part3.txt, part4.txt, hint.txt",
+      "value": 300,
+      "type": "standard",
+      "state": "visible",
+      "flags": [
+        {
+          "type": "static",
+          "content": "TATARHACK{p1ec3s_t0g3th3r}"
+        }
+      ],
+      "hints": [
+        {"content": "Прочитай hint.txt — там указан порядок", "cost": 75},
+        {"content": "Порядок: 3, 1, 4, 2", "cost": 150}
+      ]
+    }
+  ]
+}
